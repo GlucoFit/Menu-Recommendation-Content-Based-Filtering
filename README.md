@@ -33,10 +33,9 @@ We will use menu and user as diferent input in the neural network which have ind
 In model we use Dropout, BatchNormalitation, and kernel_regularizer to avoid overfitting. Than we use optimizer Adam to get the maksimum accuracy, because adam can iterating close range loss fucntion.
 
 We also use earlystoping to build automation stop for the stopping in the best epoch training condition.
+> early_stopping = EarlyStopping(monitor='val_accuracy', patience=50, restore_best_weights=True)
 
 **Testing Model**
-
-The code below is model testing that we use to generate the recommendation menu from new user input.
 
 In this process, we will repeat the preprocessing step for new input variabel from user (encode the input with OneHotEncoding, then scaling the encode input with StandardScaler
 
